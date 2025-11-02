@@ -1,0 +1,8 @@
+// hide .next, node_modules, and other common folders from the VSCode file explorer
+{
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/.git": true
+  }
+}
