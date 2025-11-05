@@ -26,8 +26,12 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Welcome back</CardTitle>
-          <CardDescription>Continue with your Google account</CardDescription>
+          <CardTitle className="text-2xl font-display tracking-tight">
+            Welcome back
+          </CardTitle>
+          <CardDescription className="text-base">
+            Continue with your Google account
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <form action={signInEmail}>
@@ -53,7 +57,7 @@ export function LoginForm({
                   <FieldLabel htmlFor="password">Password</FieldLabel>
                   <a
                     href="#"
-                    className="ml-auto text-sm underline-offset-4 hover:underline"
+                    className="ml-auto text-sm underline-offset-4 hover:underline font-medium"
                   >
                     Forgot your password?
                   </a>
@@ -61,18 +65,30 @@ export function LoginForm({
                 <Input name="password" id="password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>
+                <Button type="submit" className="font-semibold">
+                  Login
+                </Button>
                 <FieldDescription className="text-center">
-                  Don&apos;t have an account? <a href="/signup">Sign up</a>
+                  Don&apos;t have an account?{" "}
+                  <a href="/signup" className="font-semibold">
+                    Sign up
+                  </a>
                 </FieldDescription>
               </Field>
             </FieldGroup>
           </form>
         </CardContent>
       </Card>
-      <FieldDescription className="px-6 text-center">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+      <FieldDescription className="px-6 text-center text-sm">
+        By clicking continue, you agree to our{" "}
+        <a href="#" className="font-medium">
+          Terms of Service
+        </a>{" "}
+        and{" "}
+        <a href="#" className="font-medium">
+          Privacy Policy
+        </a>
+        .
       </FieldDescription>
     </div>
   );

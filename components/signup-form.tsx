@@ -26,8 +26,12 @@ export function SignupForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Create your account</CardTitle>
-          <CardDescription>Continue with your Google account</CardDescription>
+          <CardTitle className="text-2xl font-display tracking-tight">
+            Create your account
+          </CardTitle>
+          <CardDescription className="text-base">
+            Continue with your Google account
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <form action={signUpEmail}>
@@ -88,18 +92,30 @@ export function SignupForm({
                 </FieldDescription>
               </Field>
               <Field>
-                <Button type="submit">Create Account</Button>
+                <Button type="submit" className="font-semibold">
+                  Create Account
+                </Button>
                 <FieldDescription className="text-center">
-                  Already have an account? <a href="/login">Sign in</a>
+                  Already have an account?{" "}
+                  <a href="/login" className="font-semibold">
+                    Sign in
+                  </a>
                 </FieldDescription>
               </Field>
             </FieldGroup>
           </form>
         </CardContent>
       </Card>
-      <FieldDescription className="px-6 text-center">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+      <FieldDescription className="px-6 text-center text-sm">
+        By clicking continue, you agree to our{" "}
+        <a href="#" className="font-medium">
+          Terms of Service
+        </a>{" "}
+        and{" "}
+        <a href="#" className="font-medium">
+          Privacy Policy
+        </a>
+        .
       </FieldDescription>
     </div>
   );
